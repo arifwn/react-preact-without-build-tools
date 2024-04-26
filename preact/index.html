@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>ES Import Maps Shim</title>
+    <!-- Include the polyfill -->
+    <script defer src="/preact/node_modules/es-module-shims/dist/es-module-shims.js"></script>
+
+    <!-- Declare the import map wich is a json object that starts with the key "imports". 
+    This is an object that contains the mapping of the import URLs to the node_modules folder -->
+
+    <script type="importmap">
+      {
+        "imports": {
+            "preact": "/preact/node_modules/preact/dist/preact.mjs",
+            "preact/hooks": "/preact/node_modules/preact/hooks/dist/hooks.mjs",
+            "htm/preact": "/preact/node_modules/htm/preact/standalone.mjs"
+        }
+      }
+    </script>
+    <script type="module" src="/preact/src/entrypoint-test.js"></script>
+  </head>
+  <body>
+    
+  </body>
+</html>

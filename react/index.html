@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>ES Import Maps Shim</title>
+    <script type="importmap">
+      {
+        "imports": {
+            "react": "/react/node_modules/es-react/dev/index.js",
+            "htm": "/react/node_modules/htm/dist/htm.mjs"
+        }
+      }
+    </script>
+    <script type="module" src="/react/src/entrypoint-test.js">
+  </script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
